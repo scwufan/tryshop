@@ -15,6 +15,7 @@ import axios from 'axios'
    },
    data () {
      return {
+       data:[],
 
      }
    },
@@ -24,6 +25,7 @@ import axios from 'axios'
    mounted() {
      axios.get('http://192.168.101.98:7001/shoplist/getShop').then((res) =>{
         console.log(res)
+        this.data= res
      })
    },
    watch: {
